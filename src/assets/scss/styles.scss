@@ -1,2 +1,28 @@
-/* // Import all of Bootstrap's CSS */
+/* // IMPORT BOOTSTRAP'S CSS
 @import "~bootstrap/scss/bootstrap";
+
+//CUSTOM STYLE */
+html {
+  scroll-behavior: smooth;
+}
+
+.newsElement {
+  height: 250px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+
+}
+
+.newsElement.title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.newsElement.url:hover {
+  text-decoration: underline;
+}
+
+.newsElement.time {
+  font-size: 12px;
+  color: lightgray;
+}

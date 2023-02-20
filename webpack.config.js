@@ -1,8 +1,8 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
 const Dotenv = require('dotenv-webpack');
+
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -19,6 +19,7 @@ const config = {
     static: path.resolve(__dirname, 'dist'),
     open: true,
     host: "localhost",
+    
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -27,7 +28,6 @@ const config = {
 
     // Add your plugins here  
     new Dotenv({
-      path: path.resolve(__dirname, './.env'),
       systemvars: true,
     }),
 
@@ -83,6 +83,8 @@ const config = {
 
 
 module.exports = () => {
+
+  
   if (isProduction) {
     config.mode = "production";
 
