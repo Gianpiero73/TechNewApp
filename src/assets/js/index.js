@@ -1,5 +1,5 @@
 // IMPORT AXIOS
-import axios from 'axios';
+import axios, { Axios } from 'axios';
 // IMPORT LODASH
 import _ from 'lodash';
 // Import all of Bootstrap's JS
@@ -34,22 +34,20 @@ axios.get(process.env.API_MAIN)
 // // FUNCTION TO DISPLAY THE NEWS
 
 function displayNews(){
+    const newsContainer = document.createElement("div");
     newsDetails.innerHTML = '';
-    startIndex = 0;
-    endIndex = 10;
-const firstTenNews = newsDataArr.slice(startIndex, endIndex);
+const newsSlice = newsDataArr.slice(startIndex, endIndex);
 
-firstTenNews.forEach((news)=>{
-    axios.get(process.env.API_ITEM+ news +'.json')
+newsSlice.forEach((news)=>{
+    axios.get(process.env.API_ITEM + news +'.json')
     .then((res)=>{
         const news=res.data;
         const title = news.title;
-        const description = news.text;
-        const url = news.url;
         const time = new Date(news.time * 1000).toLocaleString();
+        const url = news.url;
+        
 
     //create news element
-
     const newsElement=document.createElement("div");
     newsElement.classList.add("newsElement")
     newsElement.innerHTML=
@@ -59,23 +57,26 @@ firstTenNews.forEach((news)=>{
         <a href="${url}">Read Here</a> 
      </div>
     <br>`;
-
-    newsDetails.appendChild(newsElement);
+    newsContainer.appendChild(newsElement);
     })
+
     .catch((err)=>{
         console.log(err);
     });
 });
+
+newsDetails.appendChild(newsContainer);
+
 }
 
 // // LOAD MORE NEWS FUNCTION
 function loadMoreNews() {
     startIndex += 10;
     endIndex += 10;
-
-const loadMoreBtn = document.querySelector('#loadMoreBtn');
-loadMoreBtn.addEventListener('click', () => {
-  displayNews(10);
-});
+    displayNews();
 
 }
+
+const newsDetails = document.querySelector('#newsDetails');
+const loadMoreBtn = document.querySelector('#loadMoreBtn');
+loadMoreBtn.addEventListener('click', loadMoreNews);
