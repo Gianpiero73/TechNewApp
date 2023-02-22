@@ -34,8 +34,8 @@ axios.get(process.env.API_MAIN)
 // // FUNCTION TO DISPLAY THE NEWS
 
 function displayNews(){
-    const newsContainer = document.createElement("div");
-    newsDetails.innerHTML = '';
+    // const newsContainer = document.createElement("div");
+    // newsDetails.innerHTML = '';
 const newsSlice = newsDataArr.slice(startIndex, endIndex);
 
 newsSlice.forEach((news)=>{
@@ -57,7 +57,7 @@ newsSlice.forEach((news)=>{
         <a href="${url}">Read Here</a> 
      </div>
     <br>`;
-    newsContainer.appendChild(newsElement);
+    newsDetails.appendChild(newsElement);
     })
 
     .catch((err)=>{
@@ -65,7 +65,7 @@ newsSlice.forEach((news)=>{
     });
 });
 
-newsDetails.appendChild(newsContainer);
+// newsDetails.appendChild(newsContainer);
 
 }
 
@@ -75,8 +75,12 @@ function loadMoreNews() {
     endIndex += 10;
     displayNews();
 
+    console.log(startIndex)
+    console.log(endIndex)
+   
 }
 
-const newsDetails = document.querySelector('#newsDetails');
+// const newsDetails = document.querySelector('#newsDetails');
 const loadMoreBtn = document.querySelector('#loadMoreBtn');
-loadMoreBtn.addEventListener('click', loadMoreNews);
+loadMoreBtn.addEventListener('click',loadMoreNews);
+
