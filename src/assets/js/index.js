@@ -1,7 +1,6 @@
 // IMPORT AXIOS
 import axios, { Axios } from "axios";
-// IMPORT LODASH
-// const _get = require("lodash/get");
+//BOOTSTRAP
 import Alert from "bootstrap/js/dist/alert";
 import { Tooltip, Toast, Popover } from "bootstrap";
 import { data } from "autoprefixer";
