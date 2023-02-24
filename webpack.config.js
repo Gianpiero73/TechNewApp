@@ -1,8 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const Dotenv = require('dotenv-webpack');
-
+const Dotenv = require("dotenv-webpack");
 
 const isProduction = process.env.NODE_ENV == "production";
 
@@ -16,21 +15,19 @@ const config = {
     path: path.resolve(__dirname, "dist"),
   },
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
+    static: path.resolve(__dirname, "dist"),
     open: true,
     host: "localhost",
-    
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
 
-    // Add your plugins here  
+    // Add your plugins here
     new Dotenv({
       systemvars: true,
     }),
-
   ],
   module: {
     rules: [
@@ -42,8 +39,7 @@ const config = {
         test: /\.css$/i,
         use: [stylesHandler, "css-loader", "postcss-loader"],
       },
-     
-  
+
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
         type: "asset",
@@ -57,34 +53,30 @@ const config = {
             loader: stylesHandler,
           },
           {
-            loader: 'css-loader',
+            loader: "css-loader",
           },
           {
-            loader: 'postcss-loader',
+            loader: "postcss-loader",
             options: {
               postcssOptions: {
-                plugins: () => [require('autoprefixer')],
+                plugins: () => [require("autoprefixer")],
               },
             },
           },
           {
-            loader: 'sass-loader',
+            loader: "sass-loader",
           },
         ],
       },
       {
         test: /\.html$/i,
-        use: 'html-loader',
+        use: "html-loader",
       },
     ],
   },
 };
 
-
-
 module.exports = () => {
-
-  
   if (isProduction) {
     config.mode = "production";
 

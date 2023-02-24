@@ -10,5 +10,12 @@ Tech News site using APIs from Hacker News
 
 4)dopo prendo le altre facendo un ciclo for e le mostro tutte insieme
 
-5)per le successive notizie e per il bottone load more, implementare funzione start index:
-in cui calcolando di avere le prime 10 notizie deve aggiungere 10 all'array contenente tutte e 500 le notizie e visualizzare solo le succesive 10.
+5)per le successive notizie e per il bottone load more, implementare funzione startIndex endIndex e loadMoreNews()
+
+6)far funzionare bootstrap o altro css framework
+
+7)lavorare sullo stile della pagina
+
+8)implementare scorrimento pagina alla prima news caricata dopo aver schiacciato il bottone
+
+9)studiare e susare loadash nel progetto

@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-   
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
     <title>Tech News App</title>
-</head>
-<body>
-
-<!-- PAGE CONTAINER -->
-<div class="h-[100px] flex justify-center items-center">
-  <div>Tech News</div>
-</div>
-
-<div class="containerNews" id="news-container">
-  <div class="bg-slate-300 bg-slate-300 flex justify-center items-center">
-  Cards</div>
-
-  <!-- NEWS -->
-  <div class="container-fluid">
-    <div class="row">
-      <div
-        class="d-flex justify-content-center align-items-center p-2"
-        id="newsType"></div>
-    </div>
-    <div class="row">
-      <div
-        class="d-block justify-content-center align-items-center p-2"
-        id="newsDetails"></div>
-    </div>
-  </div>
-
-   <!-- LOAD MORE BUTTON -->
-   <div class="d-flex justify-content-center align-items-center mt-3">
-   <button class="btn btn-success p-2" id="loadMoreBtn">
-    Load More News</button>
- </div>
-
-  <!-- FOOTER -->
-  <div class="container-fluid mt-2 mx-0 p-0">
-    <nav class="navbar navbar-dark bg-dark m-0 p-1">
-      <div
-        class="container-fluid d-flex justify-content-center align-items-center m-0 p-0">
-        <h6 class="text-light fs-6 m-0"> Created by </h6>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="bg-dark py-2">
+      <div class="container px-4 px-lg-2 my-2">
+        <div class="text-center text-white">
+          <img
+            class="img-fluid rounded-circle mb-2"
+            src="./assets/img/logo.png"
+          />
+          <h1 class="display-4 fw-bolder">Tech News App</h1>
+          <p class="lead fw-normal text-white-50 mb-0">
+            Learn all about the recent tech news below
+          </p>
+        </div>
       </div>
-    </nav>
-  </div>
-</div>
-</body>
+    </header>
+    <!-- NEWS -->
+    <div class="card text-center">
+      <div class="card-header bg-gradient-light">
+        <div
+          class="d-flex justify-content-center align-items-center p-2"
+          id="newsType"
+        ></div>
+      </div>
+      <div class="card-header bg-gradient-light">
+        <div
+          class="d-block justify-content-center align-items-center p-2"
+          id="newsDetails"
+        ></div>
+      </div>
+    </div>
+
+    <!-- LOAD MORE BUTTON -->
+    <div class="d-flex justify-content-center align-items-center mt-3">
+      <button class="btn btn-success p-2" id="loadMoreBtn">
+        Load More News
+      </button>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="container-fluid mt-2 mx-0 p-0">
+      <nav class="bg-dark py-2">
+        <div
+          class="container-fluid d-flex justify-content-center align-items-center m-0 p-0"
+        >
+          <h6 class="text-light fs-6 m-0">Created by Gianpiero</h6>
+        </div>
+      </nav>
+    </div>
+  </body>
 </html>
