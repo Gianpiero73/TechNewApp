@@ -2,7 +2,7 @@
 
 # APP PROGETTO JAVASCRIPT ADVANCED
 
-# ecco il link diretto all'applicazione: 
+# ecco il link diretto all'applicazione: https://1technewsapp.netlify.app/
 
 ![Schermata 2023-02-24 alle 15 46 28](https://user-images.githubusercontent.com/80164691/221207833-cf03f900-6513-4f24-bf48-637cc3389893.png)
 
