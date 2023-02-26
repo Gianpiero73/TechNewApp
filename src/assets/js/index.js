@@ -46,10 +46,11 @@ function displayNews() {
         const newsElement = document.createElement("div");
         newsElement.classList.add("newsElement");
         newsElement.innerHTML = `
-      <div class="card p-2 mb-2 mx-auto col-8 text-center;">
+      <div class="card p-2 mb-2 mx-auto col-7 text-center;">
         <h3>${title}</h3>
         <p>${time}</p> 
-        <a href="${url}" target="_blank">Read Here</a>
+        <a href="${url}" target="_blank"git push -u origin main
+        >Read Here</a>
       </div> <br>
       `;
         const newsDetails = document.querySelector("#newsDetails");
