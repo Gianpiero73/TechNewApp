@@ -40,6 +40,7 @@ function displayNews() {
         const title = news.title;
         const time = new Date(news.time * 1000).toLocaleString();
         const url = news.url;
+        // window.open(url, "_blank").focus();
 
         //create news element
         const newsElement = document.createElement("div");
@@ -48,7 +49,7 @@ function displayNews() {
       <div class="card p-2 mb-2 mx-auto col-8 text-center;">
         <h3>${title}</h3>
         <p>${time}</p> 
-        <a href="${url}">Read Here</a>
+        <a href="${url}" target="_blank">Read Here</a>
       </div> <br>
       `;
         const newsDetails = document.querySelector("#newsDetails");
