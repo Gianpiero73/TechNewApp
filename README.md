@@ -20,6 +20,14 @@ Qui sotto riporto tutte le indicazioni che potranno essere utili.
 -HTML
 -CSS
 
+#STRUMENTI: LIBRERIE e FRAMEWORK
+
+-WEBPACK
+-BOOSTRAP
+-AXIOS
+-DOTENV
+
+
 # PER INIZIARE
 Per ottenere una copia locale attiva e funzionante, occore scaricare il repository in locale e quindi "clonarlo" sul proprio IDE.
 
