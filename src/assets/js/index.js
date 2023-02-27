@@ -10,10 +10,6 @@ let newsDataArr = [];
 let startIndex = 0;
 let endIndex = 10;
 
-// API's
-// API_MAIN="https://hacker-news.firebaseio.com/v0/newstories.json"
-// API_ITEM = 'https://hacker-news.firebaseio.com/v0/item/'
-
 //get 500 news
 
 axios
@@ -40,7 +36,6 @@ function displayNews() {
         const title = news.title;
         const time = new Date(news.time * 1000).toLocaleString();
         const url = news.url;
-        // window.open(url, "_blank").focus();
 
         //create news element
         const newsElement = document.createElement("div");
@@ -49,8 +44,8 @@ function displayNews() {
       <div class="card p-2 mb-2 mx-auto col-7 text-center;">
         <h3>${title}</h3>
         <p>${time}</p> 
-        <a href="${url}" target="_blank"git push -u origin main
-        >Read Here</a>
+        <a href="${url}" target="_blank" git push -u origin main>
+        Read Here</a>
       </div> <br>
       `;
         const newsDetails = document.querySelector("#newsDetails");
